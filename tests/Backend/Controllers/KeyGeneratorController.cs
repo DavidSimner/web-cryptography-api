@@ -9,9 +9,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Backend.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class KeyGeneratorController : ApiController
     {
         private const int BitLength = 2048;
