@@ -11,9 +11,15 @@
                         return new Cms().encrypt(arrangement.PublicKey, value);
                     });
 
-                    var assert = Promise.all([ arrange, act ]);
+                    var assert = Promise.all([ arrange, act ]).then(function (values) {
+                        var arrangement = values[0];
+                        var result = values[1];
+                        return new Ajax('http://localhost:64189/api/decrypter').post({ PrivateKey: arrangement.PrivateKey, CipherText: result }).then(function (response) {
+                            return response.PlainText;
+                        });
+                    });
 
-                    expect(assert).to.be.fulfilled.and.notify(done);
+                    expect(assert).eventually.equal(value).and.notify(done);
                 }
 
                 it('Hello World', function (done) {
