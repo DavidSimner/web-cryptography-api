@@ -2,12 +2,12 @@
     paths: {
         sut: '../..',
 
+        ajax: 'Scripts/ajax',
         asn1: 'Scripts/asn1',
         chai: 'Scripts/chai',
         chaiAsPromised: 'Scripts/chai-as-promised',
         common: 'Scripts/common',
-        expect: 'Scripts/expect',
-        qwest: 'Scripts/qwest'
+        expect: 'Scripts/expect'
     },
     shim: {
         asn1: {
