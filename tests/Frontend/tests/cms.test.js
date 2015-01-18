@@ -1,6 +1,6 @@
 ﻿define(['expect', 'ajax', 'sut/cms'], function (expect, Ajax, Cms) {
     describe('Cms', function () {
-        this.timeout(32000);
+        this.timeout(16000);
 
         describe('encrypt', function () {
             describe('interoperability with BouncyCastle.Crypto', function () {
