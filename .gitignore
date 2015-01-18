@@ -1,6 +1,7 @@
 bin/
 obj/
 
+_Chutzpah.*.html
 *.suo
 
 **/packages/*/

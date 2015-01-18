@@ -1,0 +1,14 @@
+﻿{
+    "TestHarnessReferenceMode": "AMD",
+    "TestHarnessLocationMode": "SettingsFileAdjacent",
+    "References": [
+        {"Path": "config/require.js"},
+        {"Path": "Scripts/require.js"}
+    ],
+    "Tests": [
+        {"Path": "tests"}
+    ],
+
+    "Framework": "mocha",
+    "MochaInterface": "bdd"
+}
