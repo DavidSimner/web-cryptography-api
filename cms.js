@@ -38,7 +38,8 @@
         return Promise.resolve(crypto.getRandomValues(new Uint8Array(16)));
     }
 
-    function importKeyAsync (pem) {
+    function importKeyAsync (armored) {
+        var pem = armored.split('\r\n').slice(1, -2).join('');
         var ber = pem2ber(pem);
         return crypto.subtle.importKey('spki', ber, { name: 'RSA-OAEP', hash: { name: 'SHA-1' } }, false, [ 'wrapKey' ]);
     }
